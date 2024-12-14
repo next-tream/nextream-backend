@@ -29,6 +29,9 @@ export class postgreSQLConfig implements TypeOrmOptionsFactory {
 			synchronize: true,
 			logging: false,
 			namingStrategy: new SnakeNamingStrategy(),
+			ssl: {
+				rejectUnauthorized: false,
+			},
 		};
 	}
 }
