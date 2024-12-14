@@ -9,7 +9,7 @@ import { UserRepository } from './user.repository';
 export class UserService {
 	constructor(private readonly userRepository: UserRepository) {}
 
-	async createUser(user: CreateUserDto) {
-		await this.userRepository.findEmail(user.email);
-	}
+	// async createUser(user: CreateUserDto) {
+	// 	await this.userRepository.findEmail(user.email);
+	// }
 }

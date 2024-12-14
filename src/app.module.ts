@@ -2,6 +2,7 @@
 
 import * as Joi from 'joi';
 
+import { AppController } from './app.controller';
 import { AuthModule } from './auth/auth.module';
 import { ChatModule } from './chat/chat.module';
 import { ConfigModule } from '@nestjs/config';
@@ -51,5 +52,6 @@ import { postgreSQLConfig } from './common/configs/postgreSQLConfig';
 
 		AuthModule,
 	],
+	controllers: [AppController],
 })
 export class AppModule {}
