@@ -10,7 +10,7 @@ import { UserModule } from 'src/user/user.module';
 import { UserRepository } from 'src/user/user.repository';
 
 @Module({
-	imports: [TypeOrmModule.forFeature([User]), JwtModule.register({}), UserModule],
+	imports: [TypeOrmModule.forFeature([User], 'postgres'), JwtModule.register({}), UserModule],
 	controllers: [AuthController],
 	providers: [AuthService, UserRepository],
 })
